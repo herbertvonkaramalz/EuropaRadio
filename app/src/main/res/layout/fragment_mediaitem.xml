@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2017 Google Inc. All rights reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_margin="2dp"
+  android:background="@drawable/media_item_background">
+
+  <ImageView
+    android:id="@+id/albumArt"
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:layout_marginBottom="24dp"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toTopOf="@+id/title"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:srcCompat="@drawable/ic_album_black_24dp"
+    tools:ignore="ContentDescription" />
+
+  <TextView
+    android:id="@+id/title"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:textAlignment="center"
+    android:textAppearance="@style/TextAppearance.Uamp.Title"
+    app:layout_constraintBottom_toTopOf="@+id/center_guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toRightOf="@+id/albumArt"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:text="Song Title" />
+
+  <TextView
+    android:id="@+id/subtitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:textAlignment="center"
+    android:textAppearance="@style/TextAppearance.Uamp.Subtitle"
+    app:layout_constraintTop_toBottomOf="@+id/title"
+    tools:layout_editor_absoluteX="20dp"
+    tools:text="Artist" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/center_guideline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="477dp" />
+
+  <TextView
+    android:id="@+id/textView4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="24dp"
+    android:text="Tippe auf den Bildschirm um das Radio zu starten oder zu stoppen."
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
